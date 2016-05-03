@@ -1,4 +1,12 @@
 # react_router_redux
+```sh
 npm install
-npm run watch  /*http://localhost:3001*/
-npm run build  /*./dist*/
+```
+```sh
+npm start
+``
+/*http://localhost:3001*/
+```sh
+npm run build
+```
+/*./dist*/
