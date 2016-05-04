@@ -27,9 +27,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist'),
         publicPath: '',
-        filename: '[name].js',
-        library: ['Example', '[name]'],
-        pathInfo: true
+        filename: '[name].js'
     },
 
     module: {
@@ -38,7 +36,6 @@ module.exports = {
                 cacheDirectory: true,
                 presets: ['es2015', 'react', 'stage-0']
             }},
-            {test: /\.html$/, loader: 'raw'},
             {test: /(?!\.html)\.jade$/, loader: 'jade-loader'},
             {test: /\.(css|less)$/, loader: 'style-loader!css-loader!postcss-loader!less-loader'},
             {test: /\.(ttf|eot|woff|woff2|otf|svg)/, loader: 'file-loader?name=./font/[name].[ext]'},
