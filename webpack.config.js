@@ -13,8 +13,6 @@ var common = [
 ]
 
 module.exports = {
-    target: 'web',
-    cache: true,
     entry: {
         module: path.join(srcPath, 'module.js'),
         common: common
@@ -47,20 +45,16 @@ module.exports = {
     plugins: [
         new webpack.optimize.CommonsChunkPlugin('common', 'common.js'),
         new HtmlWebpackPlugin({
-            inject: true,
             template: 'src/index.html'
         }),
         new webpack.NoErrorsPlugin()
     ],
-
-    debug: true,
-    devtool: 'false',
     devServer: {
-        contentBase: './dist',
+        contentBase: srcPath,
         proxy: {
             '/web/*': {
-                target: 'http://139.196.12.160:8010',
-                host: '139.196.12.160'
+                target: 'http://xxx',
+                host: 'xxx'
             }
         },
         historyApiFallback: true
