@@ -33,7 +33,8 @@ module.exports = {
             {test: /\.jsx?$/, loader: 'es3ify-loader'},
             {test: /\.(jsx|js)$/, loader: 'babel-loader', exclude:/(node_modules|bower_components)/, query: {
                 cacheDirectory: true,
-                presets: ['es2015', 'react', 'stage-0']
+                presets: ['es2015', 'react', 'stage-0'],
+                plugins: [['antd', {style: 'css'}]]
             }},
             {test: /(?!\.html)\.jade$/, loader: 'jade-loader'},
             {test: /\.(css|less)$/, loader: 'style-loader!css-loader!postcss-loader!less-loader'},
