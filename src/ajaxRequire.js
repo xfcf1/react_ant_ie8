@@ -7,7 +7,7 @@ class Ajax {
             dataType: 'JSON',
             type: 'POST',
             url: url,
-            data: datas
+            data: JSON.stringify(datas)
         }).done(function(data){
             console.log('ajax success');
             console.log(data);
