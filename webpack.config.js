@@ -30,7 +30,6 @@ module.exports = {
 
     module: {
         loaders: [
-            {test: /\.jsx?$/, loader: 'es3ify-loader'},
             {test: /\.(jsx|js)$/, loader: 'babel-loader', exclude:/(node_modules|bower_components)/, query: {
                 cacheDirectory: true,
                 presets: ['es2015', 'react', 'stage-0'],
@@ -41,6 +40,12 @@ module.exports = {
             {test: /\.(ttf|eot|woff|woff2|otf|svg)/, loader: 'file-loader?name=./font/[name].[ext]'},
             {test: /\.json$/, loader: 'file-loader?name=./json/[name].json'},
             {test: /\.(png|jpg|jpeg|gif)$/, loader: 'url-loader?limit=10000&name=./images/[name].[ext]'}
+        ],
+        postLoaders: [
+          {
+            test: /\.js$/,
+            loaders: ['es3ify-loader']
+          }
         ]
     },
     plugins: [
