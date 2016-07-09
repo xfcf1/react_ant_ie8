@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { DatePicker, Switch, Slider } from 'antd';
+import Page from './page.jsx';
+import Demo from '../containers/demo';
+
 export default class Index extends React.Component{
     render(){
         return(
-            <div>这个是首页
+            <Page>
+                <Demo/>
                 <br/>
                 <DatePicker/>
                 <br/>
@@ -12,8 +16,7 @@ export default class Index extends React.Component{
                 <br/>
                 <Slider/>
                 <br/>
-                <div><Link to="todo">ToDo Demo</Link></div>
-            </div>
+            </Page>
         )
     }
 }

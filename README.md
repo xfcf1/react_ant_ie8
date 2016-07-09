@@ -12,5 +12,3 @@ npm start
 ```sh
 npm run build
 ```
-
-里面有个redux todo的 官方案例 不需要删除即可
