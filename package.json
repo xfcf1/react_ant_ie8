@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "scripts": {
     "build": "rimraf ./dist&& NODE_ENV=production webpack --progress && gulp copy-ie8-js",
-    "start": "webpack-dev-server --hot --inline --progress --colors --port 9011",
+    "start": "webpack-dev-server --hot --inline --progress --colors --port 3000",
     "test": "echo \"No unit tests and e2e tests yet\" && exit 1"
   },
   "license": "MIT",
